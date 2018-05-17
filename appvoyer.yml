@@ -1,7 +1,10 @@
 # Build worker image: Visual Studio 2017
 # Optional, default: 2015
-image:
-- Visual Studio 2017
+#image:
+#  - Visual Studio 2017
+
+version: 1.0.{build}-{branch}
+
 environment:
   PYTHON: C:\Python36-x64
 # matrix:
