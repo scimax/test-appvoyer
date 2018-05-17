@@ -36,10 +36,13 @@ install:
   # TODO: check if ps version possible
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "python --version"
+  - pip freeze
 
 # 5. patch assemblyinfo
 
 # 6. modify hosts files
+
+build: off
 
 # 7. Tests
 test_script:
