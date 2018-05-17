@@ -37,7 +37,7 @@ install:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "python --version"
   - pip freeze
-  - pip install requirements.txt
+  - pip install -r requirements.txt
 
 # 5. patch assemblyinfo
 
