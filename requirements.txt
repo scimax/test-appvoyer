@@ -1,0 +1,7 @@
+beautifulsoup4==4.5.3     # version 4.4.1 also works  # MIT
+bs4==0.0.1
+comtypes==1.1.4  # MIT License
+more-itertools==2.5.0  # MIT
+Pillow==4.0.0  # Standard PIL License
+PyPDF2==1.26.0  # License :: OSI Approved :: BSD License
+reportlab==3.4.0  # BSD license (see license.txt for details), Copyright (c) 2000-2015, ReportLab Inc.
