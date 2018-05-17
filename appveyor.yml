@@ -1,0 +1,38 @@
+# Build worker image: Visual Studio 2017
+# Optional, default: 2015
+#image:
+#  - Visual Studio 2017
+
+version: 1.0.{build}-{branch}
+
+environment:
+  PYTHON: C:\Python36-x64
+# matrix:
+# Python 3.6.5 x64
+# Python 3.6.5 x86
+
+
+# Node 8.x is default install on all build workers 
+
+
+# 1. init scripts
+init:
+  - "ECHO %PYTHON%"
+
+# 2. clone repo in folder, cd to dir
+
+# 3. restore build cache
+
+# 4. run install scripts
+install:
+  - '%PYTHON%/python -c "import platform; print platform.uname()"'
+  - '%PYTHON%/python -c "import sys; print sys.maxint"'
+  - '%PYTHON%/python -c "import sys; print sys.version"'
+
+  # TODO: check if ps version possible
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "python --version"
+
+# 5. patch assemblyinfo
+
+# 6. modify hosts files
