@@ -1,3 +1,7 @@
+# Example scripts:
+# https://github.com/FCS-analysis/PyCorrFit/blob/master/appveyor.yml
+# https://github.com/thbar/kiba/blob/master/appveyor.yml
+
 # Build worker image: Visual Studio 2017
 # Optional, default: 2015
 #image:
@@ -25,9 +29,9 @@ init:
 
 # 4. run install scripts
 install:
-  - '%PYTHON%/python -c "import platform; print platform.uname()"'
-  - '%PYTHON%/python -c "import sys; print sys.maxint"'
-  - '%PYTHON%/python -c "import sys; print sys.version"'
+  - '%PYTHON%/python -c "import platform; print(platform.uname())"'
+  - '%PYTHON%/python -c "import sys; print(sys.maxint)"'
+  - '%PYTHON%/python -c "import sys; print(sys.version)"'
 
   # TODO: check if ps version possible
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
@@ -36,3 +40,7 @@ install:
 # 5. patch assemblyinfo
 
 # 6. modify hosts files
+
+# 7. Tests
+test_script:
+  - python hello-tk.py
